@@ -35,7 +35,11 @@ T *  alReves( T * p, int n ) {
  * 
  * Esta función convierte de string a uint y lo invierte
  * 
- * @param 
+ * @param pString: El string que quieres convertir  a uint
+ * @param tamMax: El tamaño máximo a copiar
+ * 
+ * 
+ * @return El uint convertido
  * 
  */
 // ----------------------------------------------------
@@ -86,6 +90,13 @@ public:
   public:
 
 	// .........................................................
+  /**
+   * 
+   * Constructor de la característica
+   * 
+   * @param nombreCaracteristica_: Los datos de la caracteristica
+   *  
+  */
 	// .........................................................
 	Caracteristica( const char * nombreCaracteristica_ )
 	  :
@@ -95,6 +106,17 @@ public:
 	} // ()
 
 	// .........................................................
+  /**
+   * 
+   * Constructor de la característica con sus propiedades y permisos
+   * 
+   * @param nombreCaracteristica_: Los datos de la caracteristica
+   * @param props: Las propiedades
+   * @param permisoRead: El permiso de lectura
+   * @param permisoWrite: El permiso de escritura
+   * @param tam: El tamaño máximo de lo datos
+   * 
+  */
 	// .........................................................
 	Caracteristica( const char * nombreCaracteristica_ ,
 					uint8_t props,

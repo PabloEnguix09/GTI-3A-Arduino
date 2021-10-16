@@ -16,6 +16,13 @@ class PuertoSerie  {
 
 public:
   // .........................................................
+  /**
+   * 
+   * Constructor de PuertoSerie
+   * 
+   * @param baudios: La frecuencia en baudios a la que estará el puerto serie
+   * 
+  */
   // .........................................................
   PuertoSerie (long baudios) {
 	Serial.begin( baudios );
