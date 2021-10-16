@@ -239,6 +239,9 @@ public:
    * @param carga Los bytes que son fijos
    * @param tamanyoCarga Los bytes que faltan para que el beacon tenga su tamaño máximos
    *
+   *
+   * @return "emitiriBeacon libre  Bluefruit.Advertising.start( 0 );  \n" Escribe esto por el puerto serie
+   * 
    */
   // ·······
   void emitirAnuncioIBeaconLibre( const char * carga, const uint8_t tamanyoCarga ) {

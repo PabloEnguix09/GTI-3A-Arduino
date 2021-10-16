@@ -23,6 +23,11 @@ public:
   } // ()
 
   // .........................................................
+  /**
+   * 
+   * Esta función espera a que el puerto serie esté libre
+   * 
+   */
   // .........................................................
   void esperarDisponible() {
 
@@ -33,6 +38,13 @@ public:
   } // ()
 
   // .........................................................
+  /**
+   * 
+   * Esta función escribe un mensaje en el puerto serie
+   * 
+   * @param mensaje El mensaje a escribir
+   * 
+   */
   // .........................................................
   template<typename T>
   void escribir (T mensaje) {

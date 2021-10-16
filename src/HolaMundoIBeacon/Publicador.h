@@ -54,12 +54,26 @@ public:
   } // ()
 
   // ............................................................
+  /**
+   * 
+   * Enciende la emisora de beacons
+   * 
+   */
   // ............................................................
   void encenderEmisora() {
 	(*this).laEmisora.encenderEmisora();
   } // ()
 
   // ............................................................
+  /**
+   * 
+   * Publica el valor de CO2 medido por el sensor
+   * 
+   * @param valorCO2 El valor medido
+   * @param contador
+   * @param tiempoEspera El tiempo que hay que esperar para que el emisor y el receptor se encuentren
+   * 
+   */
   // ............................................................
   void publicarCO2( int16_t valorCO2, uint8_t contador,
 					long tiempoEspera ) {
@@ -96,6 +110,15 @@ public:
   } // ()
 
   // ............................................................
+    /**
+   * 
+   * Publica el valor de temperatura medido por el sensor
+   * 
+   * @param valorTemperatura El valor medido
+   * @param contador
+   * @param tiempoEspera El tiempo que hay que esperar para que el emisor y el receptor se encuentren
+   * 
+   */
   // ............................................................
   void publicarTemperatura( int16_t valorTemperatura,
 							uint8_t contador, long tiempoEspera ) {

@@ -31,6 +31,13 @@ T *  alReves( T * p, int n ) {
 } // ()
 
 // ----------------------------------------------------
+/**
+ * 
+ * Esta función convierte de string a uint y lo invierte
+ * 
+ * @param 
+ * 
+ */
 // ----------------------------------------------------
 uint8_t * stringAUint8AlReves( const char * pString, uint8_t * pUint, int tamMax ) {
 
@@ -103,6 +110,14 @@ public:
   private:
 	// .........................................................
 	// CHR_PROPS_WRITE , CHR_PROPS_READ ,  CHR_PROPS_NOTIFY 
+
+  /**
+   * 
+   * Asigna propiedades a la característica
+   * 
+   * @param props: Las propiedades a asignar
+   * 
+   */
 	// .........................................................
 	void asignarPropiedades ( uint8_t props ) {
 	  // no puedo escribir AUN si el constructor llama a esto: Serial.println( " laCaracteristica.setProperties( props ); ");
@@ -111,6 +126,15 @@ public:
 
 	// .........................................................
 	// SecureMode_t::SECMODE_OPEN  , SecureMode_t::SECMODE_NO_ACCESS
+
+  /**
+   * 
+   * Asigna permisos a la caracteristica
+   * 
+   * @param permisoRead: El permiso para leer
+   * @param permisoWrite: El permiso para escribir
+   * 
+   */
 	// .........................................................
 	void asignarPermisos( SecureMode_t permisoRead, SecureMode_t permisoWrite ) {
 	  // no puedo escribir AUN si el constructor llama a esto: Serial.println( "laCaracteristica.setPermission( permisoRead, permisoWrite ); " );
@@ -118,6 +142,13 @@ public:
 	} // ()
 
 	// .........................................................
+  /**
+   * 
+   * Asigna un tamaño máximo a los datos
+   * 
+   * @param tam: El tamaño máximo
+   * 
+   */
 	// .........................................................
 	void asignarTamanyoDatos( uint8_t tam ) {
 	  // no puedo escribir AUN si el constructor llama a esto: Serial.print( " (*this).laCaracteristica.setFixedLen( tam = " );
@@ -128,6 +159,16 @@ public:
 
   public:
 	// .........................................................
+  /**
+   * 
+   * Asigna las propiedades, los permisos y el tamaño de datos
+   * 
+   * @param props: Las propiedades a asignar
+   * @param permisoRead: El permiso para leer
+   * @param permisoWrite: El permiso para escribir
+   * @param tam: El tamaño máximo de datos
+   * 
+   */
 	// .........................................................
 	void asignarPropiedadesPermisosYTamanyoDatos( uint8_t props,
 												 SecureMode_t permisoRead,
@@ -140,6 +181,16 @@ public:
 												 
 
 	// .........................................................
+  /**
+   * 
+   * Esta función escribe datos en la caracteristica
+   * 
+   * @param str: Los datos a escribir
+   * 
+   * 
+   * @return El número de bytes que escribe
+   * 
+   */
 	// .........................................................
 	uint16_t escribirDatos( const char * str ) {
 	  // Serial.print( " return (*this).laCaracteristica.write( str  = " );
@@ -153,6 +204,16 @@ public:
 	} // ()
 
 	// .........................................................
+  /**
+   * 
+   * Manda una nootificación con datos
+   * 
+   * @param str: Los datos que notifica
+   * 
+   * 
+   * @return El número de bytes que notifica
+   * 
+   */
 	// .........................................................
 	uint16_t notificarDatos( const char * str ) {
 	  
@@ -162,12 +223,22 @@ public:
 	} //  ()
 
 	// .........................................................
+  /**
+   * 
+   * Instala el callback para cuando escribe una caracteristica
+   * 
+   */
 	// .........................................................
 	void instalarCallbackCaracteristicaEscrita( CallbackCaracteristicaEscrita cb ) {
 	  (*this).laCaracteristica.setWriteCallback( cb );
 	} // ()
 
 	// .........................................................
+  /**
+   * 
+   * Activa la caracteristica
+   * 
+   */
 	// .........................................................
 	void activar() {
 	  err_t error = (*this).laCaracteristica.begin();
@@ -211,6 +282,11 @@ public:
   } // ()
   
   // .........................................................
+  /**
+   * 
+   * Escribe por pantalla la UUID
+   * 
+   */
   // .........................................................
   void escribeUUID() {
 	Serial.println ( "**********" );
@@ -221,12 +297,24 @@ public:
   } // ()
 
   // .........................................................
+  /**
+   * 
+   * Añade la característica
+   * 
+   * @param car: La caracteristica que añade
+   * 
+   */
   // .........................................................
   void anyadirCaracteristica( Caracteristica & car ) {
 	(*this).lasCaracteristicas.push_back( & car );
   } // ()
 
   // .........................................................
+  /**
+   * 
+   * Activa el servicio
+   * 
+   */
   // .........................................................
   void activarServicio( ) {
 	// entiendo que al llegar aquí ya ha sido configurado
