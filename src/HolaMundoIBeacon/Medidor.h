@@ -35,6 +35,8 @@ public:
   // .....................................................
   /**
    * 
+   * diseño logico: medirCO2() -> N
+   * 
    * Mide el CO2
    * 
    * @return El valor de CO2
@@ -46,6 +48,8 @@ public:
 
   // .....................................................
   /**
+   * 
+   * diseño logico: medirTemperatura() -> R
    * 
    * Mide la temperatura
    * 

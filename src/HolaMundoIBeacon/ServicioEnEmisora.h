@@ -33,6 +33,8 @@ T *  alReves( T * p, int n ) {
 // ----------------------------------------------------
 /**
  * 
+ * diseño logico: string -> stringAUint8AlReves() -> N
+ * 
  * Esta función convierte de string a uint y lo invierte
  * 
  * @param pString: El string que quieres convertir  a uint
@@ -135,6 +137,8 @@ public:
 
   /**
    * 
+   * diseño logico: propiedades -> asignarPropiedades()
+   * 
    * Asigna propiedades a la característica
    * 
    * @param props: Las propiedades a asignar
@@ -151,6 +155,8 @@ public:
 
   /**
    * 
+   * diseño logico: permisos -> asignarPermisos()
+   * 
    * Asigna permisos a la caracteristica
    * 
    * @param permisoRead: El permiso para leer
@@ -165,6 +171,8 @@ public:
 
 	// .........................................................
   /**
+   * 
+   * diseño logico: tamaño -> asignarTamanyoDatos()
    * 
    * Asigna un tamaño máximo a los datos
    * 
@@ -182,6 +190,8 @@ public:
   public:
 	// .........................................................
   /**
+   * 
+   * diseño logico: propiedades, permisos, tamaño -> asignarPropiedadesPermisosYTamanyoDatos()
    * 
    * Asigna las propiedades, los permisos y el tamaño de datos
    * 
@@ -205,6 +215,8 @@ public:
 	// .........................................................
   /**
    * 
+   * diseño logico: mensaje -> escribirDatos() -> N
+   * 
    * Esta función escribe datos en la caracteristica
    * 
    * @param str: Los datos a escribir
@@ -227,6 +239,8 @@ public:
 
 	// .........................................................
   /**
+   * 
+   * diseño logico: mensaje -> notificarDatos() -> N
    * 
    * Manda una nootificación con datos
    * 
@@ -320,6 +334,8 @@ public:
 
   // .........................................................
   /**
+   * 
+   * diseño logico: caracteristica -> anyadirCaracteristica()
    * 
    * Añade la característica
    * 

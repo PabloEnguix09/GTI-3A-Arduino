@@ -41,6 +41,9 @@ public:
 
   // .........................................................
   /**
+   * 
+   * diseño logico: nombre, fabricante, pin -> EmisoraBLE()
+   * 
    * Constructor de la clase EmisoraBLE
    *
    * @param nombreEmisora_ Nombre de la emisora Bluetooth
@@ -83,6 +86,9 @@ public:
 	
   // .........................................................
   /**
+   * 
+   * diseño logico: encenderEmisora()
+   * 
    * Esta función se utiliza para encender la emisora
    */
   // .........................................................
@@ -96,6 +102,9 @@ public:
 
   // .........................................................
   /**
+   * 
+   * diseño logico: encenderEmisora()
+   * 
    * Esta función se utiliza para encender la emisora e instalar los callbacks de establecimiento y finalización de la emisora
    */
   // .........................................................
@@ -111,6 +120,9 @@ public:
 
   // .........................................................
   /**
+   * 
+   * diseño logico: detenerAnuncio()
+   * 
    * Esta función hace que el Arduino deje de mandar anuncios
    */
   // .........................................................
@@ -125,7 +137,12 @@ public:
   
   // .........................................................
   /**
+   * 
+   * diseño logico: estaAnunciando() -> VoF
+   * 
    * Esta función comprueba si el Arduino está enviando anuncios
+   * 
+   * @return Si la plaquita está anunciando
    */
   // .........................................................
   bool estaAnunciando() {
@@ -134,6 +151,9 @@ public:
 
   // .........................................................
   /**
+   * 
+   * diseño logico: uuid, major, minor, rssi -> emitirAnuncioIBeacon()
+   * 
    * Esta función crea el beacon, lo configura y empieza a lanzar anuncios
    *
    * @param beaconUUID El identificador único del beacon
@@ -234,6 +254,9 @@ public:
 
   // ·······
   /**
+   * 
+   * diseño logico: carga, tamaño -> emitirAnuncioIBeaconLibre()
+   * 
    * Esta función emite un anuncio, pero antes borra lo anterior y deja libre el beacon
    *
    * @param carga Los bytes que son fijos
@@ -306,6 +329,9 @@ public:
 
   // .........................................................
   /**
+   * 
+   * diseño logico: servicio -> anyadirServicio() -> VoF
+   * 
    * Esta función añade un servicio a la placa
    *
    * @param servicio El servicio que se va a añadir
@@ -339,6 +365,9 @@ public:
 
   // .........................................................
   /**
+   * 
+   * diseño logico: servicio, caracteristicas -> anyadirServicioConSusCaracteristicas() -> VoF
+   * 
    * Esta función añade características al servicio y lo crea
    *
    * @param servicio El servicio a activar
@@ -362,6 +391,9 @@ public:
   
   // .........................................................
   /**
+   * 
+   * diseño logico: servicio, caracteristicas -> anyadirServicioConSusCaracteristicasYActivar() -> VoF
+   * 
    * Esta función añade características al servicio, lo crea y lo activa
    *
    * @param servicio El servicio a activar

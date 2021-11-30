@@ -18,6 +18,8 @@ public:
   // .........................................................
   /**
    * 
+   * diseño logico: baudios -> PuertoSerie()
+   * 
    * Constructor de PuertoSerie
    * 
    * @param baudios: La frecuencia en baudios a la que estará el puerto serie
@@ -46,6 +48,8 @@ public:
 
   // .........................................................
   /**
+   * 
+   * diseño logico: mensaje -> escribir()
    * 
    * Esta función escribe un mensaje en el puerto serie
    * 

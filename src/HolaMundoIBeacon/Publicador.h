@@ -27,7 +27,7 @@ private:
   // ............................................................
 public:
   EmisoraBLE laEmisora {
-	"GTI-3A", //  nombre emisora
+	"GTI-3A-Algo", //  nombre emisora
 	  0x004c, // fabricanteID (Apple)
 	  4 // txPower
 	  };
@@ -87,17 +87,6 @@ public:
 											valorCO2, // minor
 											(*this).RSSI // rssi
 									);
-
-	/*
-	Globales::elPuerto.escribir( "   publicarCO2(): valor=" );
-	Globales::elPuerto.escribir( valorCO2 );
-	Globales::elPuerto.escribir( "   contador=" );
-	Globales::elPuerto.escribir( contador );
-	Globales::elPuerto.escribir( "   todo="  );
-	Globales::elPuerto.escribir( major );
-	Globales::elPuerto.escribir( "\n" );
-	*/
-
 	//
 	// 2. esperamos el tiempo que nos digan
 	//

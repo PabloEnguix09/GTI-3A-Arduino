@@ -18,6 +18,8 @@
 // ----------------------------------------------------------
 /**
  * 
+ * diseño logico: tiempo -> esperar()
+ * 
  * Esta función espera un tiempo dado
  * 
  * @param tiempo: El tiempo a esperar
@@ -48,6 +50,8 @@ public:
   // .........................................................
   /**
    * 
+   * diseño logico: led -> encender()
+   * 
    * Enciende el LED
    * 
    */
@@ -60,6 +64,8 @@ public:
   // .........................................................
   /*
    * 
+   * diseño logico: led -> apagar()
+   * 
    * Apaga el LED
    * 
    */
@@ -71,6 +77,8 @@ public:
 
   // .........................................................
   /**
+   * 
+   * diseño logico: alternar()
    * 
    * Alterna el LED entre encendido y apagado
    * 
@@ -86,6 +94,8 @@ public:
 
   // .........................................................
   /**
+   * 
+   * diseño logico: tiempo -> brillar()
    * 
    * Hace que el LED brille durante un tiempo
    * 
